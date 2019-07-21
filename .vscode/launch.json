@@ -5,6 +5,14 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "Generate instructions",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/tools/generate_instructions.py",
+            "console": "integratedTerminal",
+            "args": [ "${workspaceFolder}/tools/op_codes.txt" ]
+        },
+        {
             "type": "lldb",
             "request": "launch",
             "name": "Debug executable 'fenesbin'",
@@ -19,7 +27,9 @@
                     "kind": "bin"
                 }
             },
-            "args": ["roms/test/other/nestest.nes"],
+            "args": [
+                "roms/test/other/nestest.nes"
+            ],
             "cwd": "${workspaceFolder}"
         }
     ]
